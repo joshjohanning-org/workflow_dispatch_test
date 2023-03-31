@@ -33,11 +33,11 @@ jobs:
           echo "The value is: ${{ github.event.inputs.foo }}"
 
       - name: Run if foo
-        if: ${{ github.event.inputs.foo == true }}
+        if: ${{ github.event.inputs.foo == 'true' }}
         run: |
           echo "${{ github.event.inputs.foo }}!"
 
       - name: Don't run if foo  # Eh, I meant "Run if not foo"
-        if: ${{ github.event.inputs.foo != true }}
+        if: ${{ github.event.inputs.foo != 'true' }}
         run: |
           echo "${{ github.event.inputs.foo }}!"
