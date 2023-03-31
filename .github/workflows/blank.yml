@@ -22,7 +22,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - run: |
-          if [ "${{ github.event.inputs.foo }}" = true ]; then
+          if [ ${{ github.event.inputs.foo }} = true ]; then
             echo "The variable is true."
           else
             echo "The variable is not true."
